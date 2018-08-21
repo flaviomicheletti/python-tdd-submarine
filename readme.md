@@ -1,12 +1,12 @@
-# Teste de programação
+# Exercício em Python (Teste de programação)
 
 Gostaríamos de avaliar o seu estilo de desenvolvimento, para isso pedimos que você faça um pequeno exercício.
 
-Durante o desenvolvimento, dê preferência para implementação em Java [eu utilizei Python].
+Durante o desenvolvimento, dê preferência para implementação em Java [eu utilizei __Python__].
 
 Crie um projeto no seu __Github__ para que possamos verificar, através dos commits, o seu raciocínio para a conclusão do exercício.
 
-Ah! Não se esqueça de usar Maven ou Gradle como gerenciador de dependências e de fazer __testes unitários_.
+Ah! Não se esqueça de usar Maven ou Gradle como gerenciador de dependências e de fazer __testes unitários__.
 
 Caso algo não esteja claro, sinta-se livre para assumir qualquer prerrogativa desejada como verdadeira e
 desenvolver a solução em cima dela; apenas crie uma documentação explicando-a.
@@ -36,6 +36,7 @@ Você deve desenvolver um sistema que processe uma série de comandos e faça a 
 Para simplificar, leve em consideração que o submarino sempre começará no ponto (0, 0, 0, NORTE) e
 
 que todo movimento quando o submarino estiver apontada para o NORTE, somará 1 ao eixo Y,
+
 todo movimento quando o submarino estiver apontada para o LESTE somará 1 ao eixo X e
 
 todo movimento para baixo diminuirá 1 do eixo Z.
