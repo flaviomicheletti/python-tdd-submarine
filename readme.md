@@ -69,8 +69,6 @@ A saída deverá conter a coordenada final do submarino junto com sua direção,
 
 Dado a seguinte entrada:
 
-(Lembrando que a posição inicial do submarino é 0, 0, 0, NORTE)
-
 ```
 RMMLMMMDDLL
 ```
@@ -80,3 +78,5 @@ A saída esperada é:
 ```
 2 3 -2 SUL
 ```
+
+Lembrando que a posição inicial do submarino é 0, 0, 0, NORTE
