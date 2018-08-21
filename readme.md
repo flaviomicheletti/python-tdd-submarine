@@ -13,6 +13,8 @@ desenvolver a solução em cima dela; apenas crie uma documentação explicando-
 
 Divirta-se!
 
+[Versão Original](https://github.com/buscape-company/exercicios/tree/master/java)
+
 
 # Viagem ao fundo do mar
 
