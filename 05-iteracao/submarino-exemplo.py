@@ -3,6 +3,8 @@ import unittest
 class Submarino(object):
 
     def __init__(self):
+        # 0 = superfície
+        self.z = 0
         # 0 norte, 1 leste, 2 sul, 3 oeste
         self.apontando_para = 0
 
@@ -16,6 +18,14 @@ class Submarino(object):
     def left(self):
         self.apontando_para = 3 if self.apontando_para == 0 else self.apontando_para - 1
         return self.apontando_para
+
+    def up(self):
+        self.z = 0 if self.z == 0 else self.z + 1
+        return self.z
+
+    def down(self):
+        self.z = self.z - 1
+        return self.z
 
 
 class SubmarinoTest(unittest.TestCase):
@@ -53,6 +63,7 @@ class SubmarinoTest(unittest.TestCase):
     def testProfundidade(self):
         sub = Submarino()
         self.assertEqual(0, sub.z)
+        self.assertEqual(0, sub.up())
         self.assertEqual(-1, sub.down())
         self.assertEqual(-2, sub.down())
         self.assertEqual(-3, sub.down())

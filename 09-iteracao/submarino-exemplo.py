@@ -5,8 +5,10 @@ class Submarino(object):
     def __init__(self):
         self.x = 0
         self.y = 0
-        self.z = 0              # 0 = superfície
-        self.apontando_para = 0 # 0 norte, 1 leste, 2 sul, 3 oeste
+        # 0 = superfície
+        self.z = 0
+        # 0 norte, 1 leste, 2 sul, 3 oeste
+        self.apontando_para = 0
 
     def coordenada(self, comando=''):
         for c in comando:
@@ -69,7 +71,6 @@ class SubmarinoTest(unittest.TestCase):
         sub = Submarino()
         self.assertEqual('-1 2 0 NORTE', sub.coordenada("LMRDDMMUU"))
 
-
     def testPosicaoInicial(self):
         sub = Submarino()
         self.assertEqual('0 0 0 NORTE', sub.coordenada())
@@ -108,6 +109,7 @@ class SubmarinoTest(unittest.TestCase):
 
         sub.movimentar()
         self.assertEqual(0, sub.x)
+
         self.assertEqual(1, sub.y)
 
         sub.movimentar()
@@ -117,22 +119,6 @@ class SubmarinoTest(unittest.TestCase):
         sub.movimentar()
         self.assertEqual(0, sub.x)
         self.assertEqual(3, sub.y)
-
-    def testMovimentarApontandoParaLeste(self):
-        sub = Submarino()
-        sub.apontando_para = 1
-
-        sub.movimentar()
-        self.assertEqual(1, sub.x)
-        self.assertEqual(0, sub.y)
-
-        sub.movimentar()
-        self.assertEqual(2, sub.x)
-        self.assertEqual(0, sub.y)
-
-        sub.movimentar()
-        self.assertEqual(3, sub.x)
-        self.assertEqual(0, sub.y)
 
     #
     # Prerrogativa: como Sul é direção oposta ao Norte diminuímos 1 a cada movimento

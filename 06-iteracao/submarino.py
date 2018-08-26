@@ -3,80 +3,84 @@ import unittest
 class Submarino(object):
 
     def __init__(self):
-        #
+        # 0 = superfície
+        self.z = 0
         # 0 norte, 1 leste, 2 sul, 3 oeste
-        #
-        self.posicionamento = 0
-        self.profundidade   = 0
+        self.apontando_para = 0
 
-    # def coordenada(self, comando=''):
-    #     return '0 0 0 NORTE'
-        # return '2 3 -2 SUL'
-
-    def movimentar(self, comando=''):
-        if (comando == 'L' or comando == 'R'):
-            self.virar(comando)
-        elif (comando == 'U' or comando == 'D'):
-            self.profundidade(comando)
-        else:
-            self.andar(comando)
-
+    def coordenada(self, comando=''):
+        return '2 3 -2 SUL'
 
     def right(self):
-        direcao_atual = self.posicionamento
-        nova_direcao  = 0 if direcao_atual == 3 else direcao_atual + 1
-        return self.definir_posicionamento(nova_direcao)
+        self.apontando_para = 0 if self.apontando_para == 3 else self.apontando_para + 1
+        return self.apontando_para
 
     def left(self):
-        direcao_atual = self.posicionamento
-        nova_direcao  = 3 if direcao_atual == 0 else direcao_atual - 1
-        return self.definir_posicionamento(nova_direcao)
+        self.apontando_para = 3 if self.apontando_para == 0 else self.apontando_para - 1
+        return self.apontando_para
 
     def up(self):
-        profundidade_atual = self.profundidade
-        nova_profundidade  = 0 if profundidade_atual == 0 else profundidade_atual + 1
-        return self.definir_profundidade(nova_profundidade)
+        self.z = 0 if self.z == 0 else self.z + 1
+        return self.z
 
     def down(self):
-        return self.definir_profundidade(self.profundidade - 1)
-
-    def definir_posicionamento(self, value):
-        self.posicionamento = value
-        return value
-
-    def definir_profundidade(self, value):
-        self.profundidade = value
-        return value
+        self.z = self.z - 1
+        return self.z
 
 
 class SubmarinoTest(unittest.TestCase):
 
-    # def testcoordenada(self):
+    # def testCoordenada(self):
     #     sub = Submarino()
     #     self.assertEqual('2 3 -2 SUL', sub.coordenada("RMMLMMMDDLL"))
+
+    #     sub = Submarino()
+    #     self.assertEqual('-1 2 0 NORTE', sub.coordenada("LMRDDMMUU"))
 
     # def testPosicaoInicial(self):
     #     sub = Submarino()
     #     self.assertEqual('0 0 0 NORTE', sub.coordenada())
 
-    def testVirarDireitaEsquerda(self):
+    #       Norte
+    #         0
+    #
+    # Oeste         Leste
+    #   3             1
+    #
+    #        Sul
+    #         2
+    def testPosicionamento(self):
         sub = Submarino()
-        self.assertEqual(0, sub.posicionamento)
+        self.assertEqual(0, sub.apontando_para)
         self.assertEqual(3, sub.left())
         self.assertEqual(0, sub.right())
         self.assertEqual(1, sub.right())
         self.assertEqual(2, sub.right())
 
+    #
+    # 0 (zero) é a superfície
+    #
     def testProfundidade(self):
         sub = Submarino()
-        self.assertEqual(0, sub.profundidade)
+        self.assertEqual(0, sub.z)
         self.assertEqual(0, sub.up())
         self.assertEqual(-1, sub.down())
         self.assertEqual(-2, sub.down())
         self.assertEqual(-3, sub.down())
         self.assertEqual(-2, sub.up())
 
+    def testMovimentarApontandoParaNorte(self):
+        sub = Submarino()
+        sub.apontando_para = 0
 
+        sub.movimentar()
+        self.assertEqual(1, sub.y)
+
+        sub.movimentar()
+        self.assertEqual(2, sub.y)
+
+        sub.movimentar()
+        self.assertEqual(3, sub.y)
 
 
 if __name__ == '__main__':

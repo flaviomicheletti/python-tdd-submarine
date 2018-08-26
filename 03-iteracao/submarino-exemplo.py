@@ -17,7 +17,6 @@ class Submarino(object):
         self.apontando_para = 3 if self.apontando_para == 0 else self.apontando_para - 1
         return self.apontando_para
 
-
 class SubmarinoTest(unittest.TestCase):
 
     # def testCoordenada(self):
@@ -46,17 +45,6 @@ class SubmarinoTest(unittest.TestCase):
         self.assertEqual(0, sub.right())
         self.assertEqual(1, sub.right())
         self.assertEqual(2, sub.right())
-
-    #
-    # 0 (zero) é a superfície
-    #
-    def testProfundidade(self):
-        sub = Submarino()
-        self.assertEqual(0, sub.z)
-        self.assertEqual(-1, sub.down())
-        self.assertEqual(-2, sub.down())
-        self.assertEqual(-3, sub.down())
-        self.assertEqual(-2, sub.up())
 
 
 if __name__ == '__main__':
