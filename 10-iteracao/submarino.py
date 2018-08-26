@@ -27,16 +27,18 @@ class Submarino(object):
     def movimentar(self):
         # Todo movimento quando o submarino estiver apontando para o NORTE,
         # somará 1 ao eixo Y
-        if (self.apontando_para == 0):   # norte
+        if (self.apontando_para == 0): # norte
             self.y += 1
-        elif (self.apontando_para == 2): # sul
+
+        if (self.apontando_para == 2): # sul
             self.y -= 1
 
         # Todo movimento quando o submarino estiver apontando para o LESTE
         # somará 1 ao eixo X
-        if (self.apontando_para == 1):    # leste
+        if (self.apontando_para == 1):  # leste
             self.x += 1
-        elif (self.apontando_para == 3):  # oeste
+
+        if (self.apontando_para == 3):  # oeste
             self.x -= 1
 
         return True
