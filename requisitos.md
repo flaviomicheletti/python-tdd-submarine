@@ -1,6 +1,10 @@
 # Viagem ao fundo do mar
 
-Uma equipe de cientista está explorando a fossa das Marianas e para isso utiliza submarinos não tripulados.
+Uma equipe de cientista está explorando a Fossa das Marianas e para isso utiliza submarinos não tripulados.
+
+> A Fossa das Marianas é o local mais profundo dos oceanos, atingindo uma profundidade de 11 034 metros.
+> Localiza-se no oceano Pacífico, a leste das ilhas Marianas, na fronteira convergente entre as placas tectônicas do
+> Pacífico e das Filipinas. (Wikipédia)
 
 Os cientistas já mapearam a área a ser explorada e a dividiram em três eixos: X, Y e Z.
 
@@ -9,9 +13,9 @@ Esses eixos controlam o posicionamento e profundidade do submarino.
 A posição do submarino é representado pela notação (0, 0, 0, NORTE) que indica os pontos X, Y, Z e
 a direção que o submarino aponta (Norte, Sul, Leste e Oeste).
 
-Os cientistas utilizam uma serie comandos simples para fazer a movimentação do submarino:
+Os cientistas utilizam uma serie de comandos simples para fazer a movimentação do submarino:
 
-+ L, R, para girar o submarino para esquerda ou direita,
++ L e R para girar o submarino para esquerda ou direita,
 + M para mover o submarino e
 + U e D para subir ou descer o submarino.
 
