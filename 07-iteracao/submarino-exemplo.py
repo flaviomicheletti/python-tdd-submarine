@@ -96,7 +96,6 @@ class SubmarinoTest(unittest.TestCase):
 
         sub.movimentar()
         self.assertEqual(0, sub.x)
-
         self.assertEqual(1, sub.y)
 
         sub.movimentar()

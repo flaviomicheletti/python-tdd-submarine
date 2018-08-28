@@ -17,6 +17,7 @@ class Submarino(object):
         self.apontando_para = 3 if self.apontando_para == 0 else self.apontando_para - 1
         return self.apontando_para
 
+
 class SubmarinoTest(unittest.TestCase):
 
     # def testCoordenada(self):

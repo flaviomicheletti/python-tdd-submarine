@@ -15,9 +15,9 @@ class SubmarinoTest(unittest.TestCase):
         sub = Submarino()
         self.assertEqual('-1 2 0 NORTE', sub.coordenada("LMRDDMMUU"))
 
-    def testPosicaoInicial(self):
-        sub = Submarino()
-        self.assertEqual('0 0 0 NORTE', sub.coordenada())
+    # def testPosicaoInicial(self):
+    #     sub = Submarino()
+    #     self.assertEqual('0 0 0 NORTE', sub.coordenada())
 
 
 if __name__ == '__main__':
