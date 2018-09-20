@@ -7,6 +7,6 @@ Há uma [playlist](https://www.youtube.com/playlist?list=PL4-j1jp_g6Dtf3oJkjxK82
 
 Assista ao vídeo de introdução...
 
-[vídeo introdutório](submarino-da-buscape/01.png )](https://youtu.be/rWe12L0YNQk)
+[![vídeo introdutório](https://github.com/flaviomicheletti/submarino-da-buscape/blob/master/01.png)](https://youtu.be/rWe12L0YNQk)
 
 e veja aqui os [requisitos](requisitos.md) do desafio.
