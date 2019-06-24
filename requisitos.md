@@ -10,7 +10,7 @@ Os cientistas já mapearam a área a ser explorada e a dividiram em três eixos:
 
 Esses eixos controlam o posicionamento e profundidade do submarino.
 
-![imagem com as dimensões](01.png)
+![imagem com as dimensões](02.png)
 
 A posição do submarino é representado pela notação (0, 0, 0, NORTE) que indica os pontos X, Y, Z e
 a direção que o submarino aponta (Norte, Sul, Leste e Oeste).
