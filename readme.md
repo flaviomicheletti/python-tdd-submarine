@@ -1,7 +1,11 @@
 # TDD e Python como você nunca viu
 
-Nessa imersão em Python nós veremos os [exercícios propostos](https://github.com/buscape-company/exercicios/)
-aos desenvolvedores da empresa Buscapé Company.
+Nessa imersão em Python nós veremos o desafio de se programar um Submario.
+
+Exercício proposto pelo time da empresa [Buscapé Company](https://github.com/buscape-company/exercicios/).
+
+
+## Onde começar?
 
 Veja aqui os [requisitos](requisitos.md) do desafio e assista ao vídeo de introdução...
 
